@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#5C8374,#93B1A6);
+}
+.wrapper{
+    width: 90%;
+    max-width: 450px;
+}
+.heading{
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+.display-container{
+    position: relative;
+    background-color:#183D3D;
+    border-radius: 1rem;
+    margin:1rem 0;
+    padding-top:0.35rem;
+    border-bottom: 0.35rem solid #5C8374;
+}
+.display{
+    width:100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    font-size: 1.5rem;
+    border: none;
+}
+.display::placeholder{
+    position:absolute;
+    top:50%;
+    left:1.5rem;
+    line-height:30px;
+    text-transform: uppercase;
+    color:white;
+    opacity: 0.7;
+    transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    top:50%;
+    right:1.5rem;
+    transform: translateY(-50%);
+}
+.input-container{
+    width:100%;
+    background-color:#183D3D;
+    border-radius: 1rem;
+    padding:2rem;
+    border-bottom: 0.35rem solid #5C8374;
+}
+.length-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#p1{
+    color:white;
+    opacity:0.7;
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+}
+#p2{
+    color:white;
+    opacity:0.7;
+    font-size: 1.5rem;
+}
+.strength-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+    color:white;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+}
+.indicator{
+    width:1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.generateBtn{
+    width: 100%;
+    padding:1rem 0;
+    font-weight: 530;
+    letter-spacing: 0.7px;
+    color: white;
+    opacity: 0.9;
+    font-size: 20px;
+    background-color:#5C8374;
+    background: linear-gradient(#5C8374,#93B1A6);
+    text-align:center;
+    border-radius: 0.75rem;
+    border: none;
+    border-bottom: 0.35rem solid #93B1A6;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.check{
+    display:flex;
+    align-items: center;
+    margin:1rem 0;
+    gap:0 1rem;
+}
+.check input{
+    appearance: none;
+    width:20px;
+    height:20px;
+    border:2px solid  #5C8374;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: #5C8374;
+}
+.check input:checked::before{
+    content:"✔";
+    position: absolute;
+    color:white;
+    opacity: 0.7;
+    font-size: 1.05rem;
+    left: 50%;
+    top:-3.5px;
+    transform: translateX(-50%) translateY(0.5%);
+}
+.check label{
+    color: white;
+    opacity: 0.7;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+.slider{
+    appearance: none;
+    width:100%;
+    height: 0.7rem;
+    cursor:poiner;
+    background-image: linear-gradient(#5C8374,#93B1A6);
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px white;
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline:3px solid white;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline:2px solid white;
+    background-color: #183D3D;
+    box-shadow: 0px 0px 25px 5px white;
+}
+.copy{
+    background-color: transparent;
+    border:none;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.copy-icon{
+    font-size: 20px;
+}
+.copy-msg{
+    position:absolute;
+    background-color: #93B1A6;
+    color: white;
+    
+    font-size: 1rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.active{
+    opacity:1;
+    transform: scale(1);
+}
